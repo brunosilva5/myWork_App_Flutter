@@ -13,13 +13,62 @@ class _HomePageState extends State<HomePage> {
         title: Text("myWork"),
         centerTitle: true,
         backgroundColor: Colors.teal,
-        leading: Icon(Icons.home),
       ),
-      body: Column(
-        children: <Widget>[
-          
-        ],
+      backgroundColor: Colors.white,
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+        },
+        child: Icon(Icons.add),
+        backgroundColor: Colors.teal,
       ),
-    );
+      body: Center(
+        child: Text("Works"),
+      ),
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.all(10.0),
+          children: <Widget>[
+            DrawerHeader(
+              child: Text("Olá Bruno!",
+              style: TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.bold
+              ),),
+              decoration: BoxDecoration(
+                color: Colors.teal
+              ),
+            ),
+            ListTile(
+              title: Text("Perfil"),
+              leading: Icon(
+                Icons.person
+              ),
+              onTap:(){
+                Navigator.pop(context);
+              },
+            ),
+            ListTile(
+              title: Text("Estatisticas"),
+              leading: Icon(
+                Icons.trending_up
+              ),
+              onTap:(){
+                Navigator.pop(context);
+              },
+            ),
+            ListTile(
+              title: Text("Sair"),
+              leading: Icon(
+                Icons.exit_to_app,
+                color: Colors.red,
+              ),
+              onTap:(){
+                Navigator.pop(context);
+              },
+            ),
+          ],
+        ),
+      ),
+      );
   }
 }
