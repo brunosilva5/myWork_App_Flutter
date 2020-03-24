@@ -1,16 +1,18 @@
-# pt
+# myWork
 
-Aplicação desenvolvida em Flutter para visualizar detalhes do trabalho
+Esta aplicação tem como principal função ajudar me na anotação de trabalhos
+realizados, assim como total de horas e valores(€) a receber na área da 
+restauração!
 
-## Getting Started
+## Em primeiro lugar
 
-This project is a starting point for a Flutter application.
+Primeiro, desenvolvi uma base de dados em Sqflite com algumas funções que 
+me poderão ser uteis no desenvolvimento deste projeto.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Na class Work existem os seguintes atributos:
+ - int id;
+ - String name;      // nome/local
+ - DateTime entrada; // hora de entrada
+ - DateTime saida;   // hora de saida
+ - bool combustivel; // Se o patrão vai pagar ou não o combustível
+ 
